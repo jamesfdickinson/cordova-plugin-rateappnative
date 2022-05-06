@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-rateappnative" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>RateAppNative</name>
+    <js-module name="RateAppNative" src="www/RateAppNative.js">
+        <clobbers target="cordova.plugins.RateAppNative" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="RateAppNative">
+                <param name="ios-package" value="RateAppNative" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/RateAppNative.m" />
+    </platform>
+    <platform name="android">
+        <framework src="com.google.android.play:review:2.0.0" />
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="RateAppNative">
+                <param name="android-package" value="com.jdsoftwarellc.cordova.rateappnative.RateAppNative" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/RateAppNative.java" target-dir="src/com/jdsoftwarellc/cordova/rateappnative" />
+
+
+    </platform>
+</plugin>
