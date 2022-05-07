@@ -13,9 +13,11 @@
             </feature>
         </config-file>
         <source-file src="src/ios/RateAppNative.m" />
+        <framework src="StoreKit.framework"/>
     </platform>
     <platform name="android">
-        <framework src="com.google.android.play:review:2.0.0" />
+        <preference name="PLAY_CORE_VERSION" default="1.+"/>
+        <framework src="com.google.android.play:core:$PLAY_CORE_VERSION" />
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="RateAppNative">
                 <param name="android-package" value="com.jdsoftwarellc.cordova.rateappnative.RateAppNative" />
