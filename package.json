@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-rateappnative",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "",
   "cordova": {
     "id": "cordova-plugin-rateappnative",
@@ -9,6 +9,10 @@
       "android"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesfdickinson/cordova-plugin-rateappnative.git"
+},
   "keywords": [
     "ecosystem:cordova",
     "cordova-ios",
